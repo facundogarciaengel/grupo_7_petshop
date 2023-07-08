@@ -12,7 +12,7 @@ La web de PetShop Innovador está diseñada para apuntar a un público diverso d
 [Timberline](https://www.timberline.com.ar/)    
 [Timoteopetshop](https://www.timoteopetshop.com/)    
 [Puppis](https://www.puppis.com.ar/)    
-[Puppis](https://www.mercadolibre.com.ar/)  
+[MercadoLibre](https://www.mercadolibre.com.ar/)  
 
 ---
 ## Los integrantes del grupo son : ## 
