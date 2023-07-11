@@ -1,4 +1,6 @@
-![Logo del Pethshop](./logo.jpeg)
+![Logo del Pethshop](
+    <img src="logo.jpeg" alt="Descripción del logo" width="200" height="200">)
+
 ---
 ###
 ***PetShop Innovador*** es una tienda en línea revolucionaria para amantes de las mascotas. Con un diseño vanguardista y una amplia variedad de productos de alta calidad, ofrecemos una experiencia innovadora en el cuidado de tus mascotas. Además de productos innovadores, brindamos servicios exclusivos como peluquería, adiestramiento y asesoramiento nutricional. Nuestra comunidad en línea y nuestro compromiso con la sostenibilidad nos distinguen. Descubre el futuro del cuidado de las mascotas en PetShop Innovador.
