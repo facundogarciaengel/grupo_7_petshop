@@ -1,5 +1,4 @@
-![Logo del Pethshop](
-    <img src="logo.jpeg" alt="Descripción del logo" width="200" height="200">)
+![Logo del Pethshop](./logo_petshop.png)
 
 ---
 ###
