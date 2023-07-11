@@ -1,4 +1,4 @@
-![Logo del Pethshop](./logo_petshop.png)
+![Logo del Pethshop](./logo_petshop.gif)
 
 ---
 ###
