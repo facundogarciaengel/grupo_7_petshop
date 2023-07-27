@@ -2,5 +2,15 @@
   "dependencies": {
     "express": "^4.18.2",
     "nodemon": "^3.0.1"
-  }
+  },
+  "name": "grupo_7_petshop",
+  "description": "![Logo del Pethshop](./logo_petshop.gif)",
+  "version": "1.0.0",
+  "main": "app..js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
