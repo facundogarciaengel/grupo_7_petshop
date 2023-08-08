@@ -115,13 +115,13 @@
   }
   
   .options-list li a{
-    color: var(--color-secundario);
+    color: var(--color-principal);
     transition: 0.5s;
   }
 
   .options-list li a:hover{
-    color: var(--color-principal);
-    font-style: italic;
+    font-size: bold;
+    text-decoration: underline;
   }
 
   .right-icons {
@@ -328,11 +328,11 @@ footer article p{
 
 footer article a{
     font-size: 10px;
-    margin: 0 auto;
+     margin: 0 auto;
     padding: 2px;
     color: var(--color-principal);
     text-decoration: none;
-}
+} 
 
 footer article a:hover{
     color: var(--celeste);
@@ -344,4 +344,111 @@ footer article i{
     margin: 0 auto;
     padding: 2px;
     color: var(--color-principal);
+}
+
+@media (min-width: 768px){
+
+
+    .search-input{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .div-reg{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;   
+        padding: 0 auto;  
+    }
+
+    .div-reg p{
+        font-size: 20px;
+    }
+/*main*/
+    .icon-div i{
+        font-size: 36px;
+    }
+
+    .options-list li{
+        font-size: 18px;
+    }
+
+
+    .img-carrito{
+        width: 40%;
+        height: 40%;
+        padding: 20px;
+        border-radius: 40px;
+    }
+
+    .div-contenido{
+        width: 60%;
+        height: 100%;
+        padding: 0;
+
+    }
+
+    .div-contenido h3{
+        font-size: 24px;
+        margin: 0 auto;
+    }
+
+    .div-contenido,select,option{
+        font-size: 24px;
+    }
+
+    .div-button,button{
+        font-size: 24px;
+    }
+    
+    .precio{
+        font-size: 36px;
+        font-weight: 800;
+    }
+
+    .div-precio-total h4{
+        font-size: 24px;
+    }
+    .div-precio-total p{
+        font-size: 36px;
+    }
+
+    .continuar-compra{
+        font-size: 24px;
+    }
+
+    footer{
+    justify-content: space-around;
+    padding: 20px auto;
+    height: 240px;
+
+    }
+
+    footer,article,h4{
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    footer article p{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    footer article a{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    footer article i{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+
+@media (min-width: 1024px){
+
 }
