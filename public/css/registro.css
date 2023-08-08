@@ -31,7 +31,6 @@ body{
     height: 5vh;
     font-size: 18px;
 }
-
 button{
     width: 15vw;
     height: 7vh;
@@ -40,4 +39,16 @@ button{
     padding: 10px;
     color: #fff;
     font-size:18px;
+}
+@media only screen and (max-width: 575px){
+    .container{
+        width: 100vw;
+        margin-top: 50%;
+    }
+    .inputs{
+        width: 70vw;
+    }
+    button{
+        width: 70vw;
+    }
 }
