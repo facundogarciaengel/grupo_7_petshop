@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color:beige;
+}
+.container{
+    background-color: aliceblue;
+    border: 1px solid black;
+    text-align:center;
+    position: static;
+    width: 50vw;
+    height: 50vh;
+    margin: 25%;
+}
+.titular{
+    font-size: 30px;
+}
+.inputs{
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid ;
+    color: var(--gris-oscuro);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 15px;
+    width: 20vw;
+    height: 5vh;
+    font-size: 18px;
+}
+button{
+    width: 15vw;
+    height: 7vh;
+    border-radius: 20px;
+    background: #0C21C1;
+    padding: 10px;
+    color: #fff;
+    font-size:18px;
+}

@@ -7,7 +7,7 @@ app.listen(3000, ()=>{
 })
 
 app.get("/", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/home.html"))
+    res.sendFile(path.join(__dirname, "/Views/Home.html"))
 })
 
 app.get("/registro", (req,res)=>{
@@ -15,7 +15,7 @@ app.get("/registro", (req,res)=>{
 })
 
 app.get("/login", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/login.html"))
+    res.sendFile(path.join(__dirname, "/Views/Login.html"))
 })
 
 app.get("/carrito", (req,res)=>{

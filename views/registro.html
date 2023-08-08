@@ -3,17 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/carrito.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <title>PetShop Innovador-Log In</title>
 </head>
 <body>
     <header>
-
+        <div class="navbar">
+            <nav>
+            <div class="logo">
+              <img src="/images/logo_petshop.jpeg" alt="Logo">
+            </div>
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <div class="right-icons">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          <div class="options-list">
+            <ul>
+                
+              <li><a href="/">Inicio</a></li>
+              <li><a href="">Perros</a></li>
+              <li><a href="">Gatos</a></li>
+              <li><a href="">Accesorios</a></li>
+              <li><a href="">Contacto</a></li>
+              <li><a href="/login">Iniciar sesion</a></li>
+              <li><a href="/registro">Registrarse</a></li>
+            </ul>
+          </div>
+        </nav>
+        </div>
     </header>
     <main>
-
+        <form action="/" method="get">
+            <section class="container">
+            <div>
+                <h4 class="titular">Crea tu cuenta!</h4>
+            </div>
+            <div>
+                <label for="na" class="label"></label>
+                <input type="text" name="nombre" id="na" placeholder="Nombre" class="inputs">
+            </div>
+            <div>
+                <label for="na" class="label"></label>
+                <input type="text" name="nombre" id="na" placeholder="Apellido" class="inputs">
+            </div>
+            <div>
+                <label for="nu" class="label"></label>
+                <input type="text" name="usuario" id="nu" placeholder="Usuario" class="inputs">
+            </div>
+            <div>
+                <label for="Contrasenia" class="label"></label>
+                <input type="password" name="Contrasenia" id="Contrasenia" placeholder="Contraseña" class="inputs">
+            </div>
+            <div>
+                <label for="em" class="label"></label>
+                <input type="email" name="email" id="em" placeholder="E-mail" class="inputs">
+            </div>
+            <div>
+                <label for="fecha" class="label"> Fecha de nacimiento</label>
+                <input type="text" name="nacimiento" id="fecha" placeholder="mm/dd/aa" class="inputs"> 
+            </div>
+            <div>
+                <label for="domicilio" class="label"></label>
+                <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" class="inputs">
+            </div>
+            <div>
+                <label for="Foto" class="label"> Foto de usuario</label>
+                <input type="file" name="Foto" id="Foto" class="inputs">
+            </div>
+            <button type="submit"> Registrarse</button>
+        </section>
+        </form>
     </main>
     <footer>
-        
+        <article>
+            <h3>Contactanos</h3>
+            <a href="#">petshop7@gmail.com</a>
+            <p>Tel: 555-555-555</p>
+            <p><i class="fas fa-map-marker-alt"></i> Av. Gral Paz 1234</p>
+        </article>
+        <article>
+        <h3>Seguinos</h3>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-tiktok"></i>
+        </article>
+        <article>
+        <h3>Metodos de pago</h3>
+        <p><i class="far fa-credit-card"></i>Tarjeta</p>
+        <p><i class="fas fa-hand-holding-usd"></i>Efectivo</p>
+        <p><i class="fas fa-comments-dollar"></i>Transferencia</p>
+        </article>
     </footer>
 </body>
 </html>
