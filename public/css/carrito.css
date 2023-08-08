@@ -12,7 +12,7 @@
   /*  HEADER: Nav*/
   nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     
   }
 
@@ -450,5 +450,52 @@ footer article i{
 
 
 @media (min-width: 1024px){
+ .logo{
+        width: 14%;
+        height: 14%;
+ }   
+.div-reg p{
+    font-size: 24px;
+    padding-top: 20px;
+}
 
+.search-input{
+    width: 100px;
+    height: 40px;
+    padding: 0;
+}
+
+.options-list li{
+    font-size: 24px;
+}
+.img-carrito{
+    width: 30%;
+    height: 40%;
+}
+.div-contenido{
+    width: 70%;
+    height: 100%;
+    padding: 0;
+}
+
+.div-contenido h3{
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.div-contenido,select,option{
+    font-size: 24px;
+
+}
+.div-button,button{
+    font-size: 24px;
+
+}
+.div-precio-total h4{
+    font-size: 30px;
+}
+.div-precio-total p{
+    font-size: 36px;
+    font-weight: bold;
+}
 }
