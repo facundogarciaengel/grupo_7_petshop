@@ -12,7 +12,7 @@ const controller = {
         res.render('registro.ejs')
     },
     carrito:(req,res)=> {
-        res.render('carritoejs')
+        res.render('carrito.ejs')
     },
 }
 
