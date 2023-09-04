@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<body>
+    <div class="mobile-container">
+      <div class="side-by-side-images">
+        <a href="#">
+          <img id="image-left" src="https://media.lmneuquen.com/p/8e66f9ee5d71ae3c2987078238c338cd/adjuntos/195/imagenes/003/530/0003530994/p21-collar-perrosce_id303988jpg.jpg" alt="Imagen 1" />
+        </a>
+        <a href="#">
+          <img id="image-right" src="https://www.tiendanimal.es/articulos/wp-content/uploads/2020/12/El-Dogo-argentino-1200x900.jpg" alt="Imagen 2" />
+        </a>
+      </div>
+      <div class="product-link">
+        <a href="#">
+          <img src="https://www.petmania.com.ar/imgs/mcat/mcat-banner-perros.png?v=8" alt="Imagen del producto" />
+        </a>
+      </div>
+      <main>
+        <form action='/edit/<%= producto.id %>?_method=put'  method="post">
+            <label for="name">Nombre del producto</label>
+            <input value=<%= producto.name %> type="text" name="name" id="name">
+            <label for="description">Descripcion:</label>
+            <input value=<%= producto.description %> type="text" name="description" id="description">
+            <label for="price">Precio: </label>
+            <input value=<%= producto.price %> type="number" name="price" id="price">
+            <label for="image">Imagen: </label>
+            <input value=<%= producto.image %> type="file" name="image" id="image" class="width:200px height: 200px">
+            <label for="category">Categoria</label>
+            <select value=<%= producto.category%> name="category">
+            <option value="perros">Perros</option>
+            <option value="gatos">Gatos</option>
+            <option value="aves">Aves</option>
+            </select>
+            <label for="color">Color</label>
+            <select value=<%= producto.color %> name="color">
+                <option value="blanco">Blanco</option>
+                <option value="negro">Negro</option>
+                <option value="gris">Gris</option>
+                </select>
+                <button type="submit">Modifcar Producto</button>
+        </form>
+
+        <form action='/delete/<%= producto.id %>?_method=delete'  method="post">
+            <button type="submit">Eliminar Producto</button>
+        </form>
+    </main>
+    </div>
+  </body>
+  <%- include('partials/footer') %>
+</html>
