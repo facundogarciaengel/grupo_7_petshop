@@ -18,7 +18,7 @@
         </a>
       </div>
       <main>
-        <form action='/edit/<%= producto.id %>?_method=put'  method="post">
+        <form action='/edit/<%= producto.id %>?_method=put'  method="post" enctype="multipart/form-data">
             <label for="name">Nombre del producto</label>
             <input value=<%= producto.name %> type="text" name="name" id="name">
             <label for="description">Descripcion:</label>
