@@ -19,7 +19,7 @@
       </div>
       <main>
           <div class="product-card">
-            <img src="/images/<%= producto.image %>" alt="Producto 1" />
+            <img src="/images/<%= producto.image?producto.image:'default.jpg' %>" alt="Producto 1" />
             <div class="product-info">
               <h2><%= producto.name %></h2>
               <p><%= producto.description %></p>

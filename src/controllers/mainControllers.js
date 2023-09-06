@@ -29,22 +29,27 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
     },
     store:(req,res)=> {
         //creo un nuevo producto con los datos que me llegan por body
-        let nuevoProducto = {
-            "id": listaProductos[listaProductos.length - 1].id + 1,
-            "name": req.body.name,
-            "desription": req.body.description,
-            "category": req.body.category,
-            "price": req.body.price,
-            "color": req.body.color,
-            "imge": req.body.image,
-            "borrado": false
+        if(req.file){
+            let nuevoProducto = {
+                "id": listaProductos[listaProductos.length - 1].id + 1,
+                "name": req.body.name,
+                "desription": req.body.description,
+                "category": req.body.category,
+                "price": req.body.price,
+                "color": req.body.color,
+                "imge": req.file.filename,
+                "borrado": false
+            }
+            //agrego el nuevo producto a la lista de productos
+            listaProductos.push(nuevoProducto)
+            //escribo la lista de productos en el archivo productos.json
+            fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
+           
+            res.redirect("/")
+        }else{
+            res.render('create.ejs')
         }
-        //agrego el nuevo producto a la lista de productos
-        listaProductos.push(nuevoProducto)
-        //escribo la lista de productos en el archivo productos.json
-        fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
-       
-        res.redirect("/")
+        
 }, 
     edit:(req,res)=> {
         let idProducto = req.params.id
@@ -60,7 +65,7 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
         productoEncontrado.description = req.body.description,
         productoEncontrado.category = req.body.category,
         productoEncontrado.price = req.body.price,
-        productoEncontrado.image= req.body.image,
+        productoEncontrado.image= req.file.filename,
         productoEncontrado.color = req.body.color
     
     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
