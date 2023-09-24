@@ -6,21 +6,19 @@ const listaProductos = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/
 const controller = {
     home:(req,res)=> {
         //filtro los productos que no estan borrados
+       
 let productosSinBorrar = listaProductos.filter((producto) => producto.borrado == false)
         res.render('home.ejs', {productos: productosSinBorrar})
     },
-    login:(req,res)=> {
-        res.render('login.ejs')
-    },
+    
     detail:(req,res)=> {
-        let idProducto = req.params.id
+        console.log('lista de Productos', listaProductos)
         //busco el producto que coincida con el id que me llega por parametro
-        let producto = listaProductos.find((producto) => producto.id == idProducto)
+        let producto = listaProductos.find((producto) => producto.id == req.params.id)
+        console.log('producto traido del dtalle', producto)
         res.render('detail', {producto: producto})
     },
-    registro:(req,res)=> {
-        res.render('registro.ejs')
-    },
+   
     carrito:(req,res)=> {
         res.render('carrito.ejs')
     },
