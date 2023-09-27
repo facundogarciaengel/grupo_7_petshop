@@ -110,5 +110,15 @@
     "description": "para aves",
     "image": "",
     "borrado": true
+  },
+  {
+    "id": 12,
+    "name": "comida ",
+    "desription": "doggy",
+    "category": "perros",
+    "price": "30000",
+    "color": "blanco",
+    "imge": "producto-1695573004708.jpg",
+    "borrado": false
   }
 ]

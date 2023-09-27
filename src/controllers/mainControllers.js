@@ -8,22 +8,20 @@ const controller = {
         //filtro los productos que no estan borrados
        
 let productosSinBorrar = listaProductos.filter((producto) => producto.borrado == false)
-        res.render('home.ejs', {productos: productosSinBorrar})
+        res.render('home', {productos: productosSinBorrar})
     },
     
     detail:(req,res)=> {
-        console.log('lista de Productos', listaProductos)
         //busco el producto que coincida con el id que me llega por parametro
         let producto = listaProductos.find((producto) => producto.id == req.params.id)
-        console.log('producto traido del dtalle', producto)
         res.render('detail', {producto: producto})
     },
    
     carrito:(req,res)=> {
-        res.render('carrito.ejs')
+        res.render('carrito')
     },
     create:(req,res)=> {
-        res.render('create.ejs')
+        res.render('create')
     },
     store:(req,res)=> {
         //creo un nuevo producto con los datos que me llegan por body
@@ -38,14 +36,16 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
                 "imge": req.file.filename,
                 "borrado": false
             }
+            console.log('Entro por post', nuevoProducto)
             //agrego el nuevo producto a la lista de productos
             listaProductos.push(nuevoProducto)
             //escribo la lista de productos en el archivo productos.json
             fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
            
-            res.redirect("/")
+            res.redirect("/producto")
         }else{
-            res.render('create.ejs')
+            console.error("No se subio ninguna imagen");
+            res.render('create')
         }
         
 }, 
@@ -57,7 +57,6 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
     update:(req,res)=> {
         //modifico el producto que coincida con el id que me llega por parametro
         let productoEncontrado = listaProductos.find((producto)=> producto.id == req.params.id)
-        console.log(productoEncontrado)
         productoEncontrado.id = productoEncontrado.id,
         productoEncontrado.name = req.body.name,
         productoEncontrado.description = req.body.description,
@@ -68,7 +67,7 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
     
     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
    
-    res.redirect("/")
+    res.redirect("/producto")
 },
     delete:(req,res)=> {
         //borrado logico del producto que coincida con el id que me llega por parametro
@@ -77,7 +76,7 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
     
     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
    
-    res.redirect("/")
+    res.redirect("/producto")
     }
 }
 

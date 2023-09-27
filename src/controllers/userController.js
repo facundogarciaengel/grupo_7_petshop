@@ -23,7 +23,7 @@ const controller = {
                   msg:'Este correo ya esta registrado'
                 }
               }, 
-              old: req.bodyj
+              old: req.body
             })
           }
           let userToCreate = {
