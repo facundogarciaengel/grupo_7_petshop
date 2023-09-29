@@ -1,0 +1,195 @@
+:root {
+    --color-principal: #006D77;
+    --color-secundario: #EDF6F9;
+    --celeste: #83C5BE;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* Estilos generales para el encabezado */
+header {
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-principal);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para el menú hamburguesa en pantallas pequeñas */
+/* Estilos para el menú hamburguesa en pantallas pequeñas */
+.mobile-header {
+    background-color: var(--color-principal); /* Color de fondo del encabezado móvil */
+    color: #fff; /* Color del texto del encabezado móvil */ /* Espaciado interno del encabezado móvil */
+    display: flex; /* Diseño de caja flexible para alinear elementos horizontalmente */
+    justify-content: space-between; /* Espacio entre los elementos del encabezado */
+    align-items: center; /* Alinea verticalmente los elementos del encabezado */
+}
+
+.mobile-menu {
+    display: none; /* Inicialmente, oculta el menú hamburguesa en pantallas pequeñas */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: var(--color-principal);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--color-secundario);
+    z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0; /* Inicialmente, el menú es invisible */
+   /* transform: translateY(-10px);  Inicialmente, el menú está ligeramente desplazado hacia arriba */
+
+}
+
+/* Estilos para mostrar el menú de navegación cuando se agrega la clase show-menu */
+.mobile-menu.show-menu {
+    display: block;
+    opacity: 0.8;
+    /*transform: translateY(0);*/
+    
+}
+
+/* Estilos para las listas dentro del menú hamburguesa */
+/* Estilos para las listas dentro del menú hamburguesa */
+.mobile-menu ul {
+   
+    z-index: 1000;
+    height: 100%;
+    list-style-type: none;
+    display: flex; /* Utiliza flexbox para alinear verticalmente los elementos */
+    flex-direction: column; /* Alinea los elementos en una columna */
+   
+}
+
+.mobile-menu li {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center; /* Centra el texto dentro de cada elemento de la lista */
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.mobile-menu a:hover {
+    color: var(--celeste); /* Cambia el color al pasar el cursor */
+}
+
+
+/* Estilos específicos para el botón de hamburguesa */
+.hamburger-button {
+    background: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    padding: 5px;
+    width: 40px;
+    height: 30px;
+}
+/* Estilos para las barras del botón de hamburguesa */
+
+
+/* Estilos para las barras del botón de hamburguesa */
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    margin: 3px auto; /* Espaciado entre las barras */
+    transition: 0.4s;
+}
+
+/* Estilos para el menú de escritorio en pantallas grandes */
+/* Estilos para el menú de escritorio en pantallas grandes */
+.desktop-header {
+    display: none;
+    background-color: var(--color-principal); /* Color de fondo del encabezado de escritorio */
+    color: #fff; /* Color del texto del encabezado de escritorio */
+    padding: 15px 0; /* Espaciado interno del encabezado de escritorio */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Establece un ancho máximo para el contenido del encabezado */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 0 20px; /* Espaciado interno de la barra de navegación */
+}
+
+/* Estilos para el logotipo */
+.logo img {
+    max-width: 100px; /* Establece un ancho máximo para el logotipo */
+}
+
+/* Estilos para la entrada de búsqueda */
+.search-input {
+    padding: 8px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Estilos para los iconos de login y carrito */
+.right-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Estilos para la lista de opciones de navegación */
+.options-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.options-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.options-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilos para los íconos de la lista de opciones */
+.options-list i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+@media(min-width: 768px) {
+
+    .desktop-header{
+        display: block;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none; /* Muestra el menú hamburguesa en pantallas pequeñas */
+    }
+
+    /* Estilos adicionales para la presentación vertical */
+    /* ... (ajusta los estilos según tus necesidades) ... */
+}

@@ -1,0 +1,101 @@
+[
+ {
+  "id": 1,
+  "firstName": "Juan",
+  "lastName": "Pérez",
+  "email": "juan@example.com",
+  "password": "contraseña123",
+  "category": "Cliente",
+  "image": "imagen1.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "María",
+  "lastName": "González",
+  "email": "maria@example.com",
+  "password": "clave456",
+  "category": "Cliente",
+  "image": "imagen2.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Carlos",
+  "lastName": "Martínez",
+  "email": "carlos@example.com",
+  "password": "secreto789",
+  "category": "Cliente",
+  "image": "imagen3.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Ana",
+  "lastName": "López",
+  "email": "ana@example.com",
+  "password": "contraseña123",
+  "category": "Administrador",
+  "image": "imagen4.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Luis",
+  "lastName": "Sánchez",
+  "email": "luis@example.com",
+  "password": "clave456",
+  "category": "Cliente",
+  "image": "imagen5.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Elena",
+  "lastName": "Ramírez",
+  "email": "elena@example.com",
+  "password": "secreto789",
+  "category": "Cliente",
+  "image": "imagen6.jpg"
+ },
+ {
+  "id": 7,
+  "firstName": "Pedro",
+  "lastName": "Díaz",
+  "email": "pedro@example.com",
+  "password": "contraseña123",
+  "category": "Cliente",
+  "image": "imagen7.jpg"
+ },
+ {
+  "id": 8,
+  "firstName": "Laura",
+  "lastName": "Fernández",
+  "email": "laura@example.com",
+  "password": "clave456",
+  "category": "Cliente",
+  "image": "imagen8.jpg"
+ },
+ {
+  "id": 9,
+  "firstName": "Miguel",
+  "lastName": "Hernández",
+  "email": "miguel@example.com",
+  "password": "secreto789",
+  "category": "Cliente",
+  "image": "imagen9.jpg"
+ },
+ {
+  "id": 10,
+  "firstName": "Isabel",
+  "lastName": "Torres",
+  "email": "isabel@example.com",
+  "password": "contraseña123",
+  "category": "Cliente",
+  "image": "imagen10.jpg"
+ },
+ {
+  "id": 11,
+  "nombre": "liliana elisa",
+  "apellido": "engel",
+  "correo": "lili@gmail.com",
+  "contrasena": "$2a$10$gI2BOJpwQNyxhRibm8rapugA813YrR6iBooARoGZBj2jsTeQRsU.2",
+  "categoria": "Administrador",
+  "foto_perfil": "user-1695599737320.jpg"
+ }
+]

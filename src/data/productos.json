@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "name": "Pelota para Perros",
+    "description": "Una pelota resistente y divertida para que tu perro juegue durante horas.",
+    "image": "imagen1.jpg",
+    "category": "Perros",
+    "color": "Blanco",
+    "price": 9.99,
+    "borrado": false
+  },
+  {
+    "id": 2,
+    "name": "Comida para Gatos Premium",
+    "description": "Comida de alta calidad para gatos con ingredientes naturales.",
+    "image": "imagen2.jpg",
+    "category": "Gatos",
+    "color": "Gris",
+    "price": 12.99,
+    "borrado": false
+  },
+  {
+    "id": 3,
+    "name": "Collar para Perros",
+    "description": "Un collar resistente y ajustable para pasear a tu perro con estilo.",
+    "image": "imagen3.jpg",
+    "category": "Perros",
+    "color": "Negro",
+    "price": 7.99,
+    "borrado": false
+  },
+  {
+    "id": 4,
+    "name": "Cama para Gatos Suave",
+    "description": "Una cama suave y cómoda para que tu gato descanse plácidamente.",
+    "image": "imagen4.jpg",
+    "category": "Gatos",
+    "color": "Blanco",
+    "price": 19.99,
+    "borrado": false
+  },
+  {
+    "id": 5,
+    "name": "Hueso de Cuero para Perros",
+    "description": "Un hueso de cuero natural para que tu perro lo mastique y juegue.",
+    "image": "imagen5.jpg",
+    "category": "Perros",
+    "color": "Gris",
+    "price": 5.99,
+    "borrado": false
+  },
+  {
+    "id": 6,
+    "name": "Arena para Gatos Absorbente",
+    "description": "Arena de alta absorción para mantener la caja de arena de tu gato limpia.",
+    "image": "imagen6.jpg",
+    "category": "Perros",
+    "color": "Negro",
+    "price": 8.99,
+    "borrado": false
+  },
+  {
+    "id": 7,
+    "name": "Correa Extensible para Perros",
+    "description": "Una correa extensible que brinda libertad de movimiento a tu perro durante los paseos.",
+    "image": "imagen7.jpg",
+    "category": "Perros",
+    "color": "Gris",
+    "price": 14.99,
+    "borrado": false
+  },
+  {
+    "id": 8,
+    "name": "Juguete para Pájaros",
+    "description": "Un juguete colorido y divertido para mantener entretenidas a tus aves.",
+    "image": "imagen8.jpg",
+    "category": "Aves",
+    "color": "Blanco",
+    "price": 3.99,
+    "borrado": false
+  },
+  {
+    "id": 9,
+    "name": "Shampoo para Perros",
+    "description": "Un shampoo suave y de calidad para mantener el pelaje de tu perro limpio y brillante.",
+    "image": "imagen9.jpg",
+    "category": "Perros",
+    "color": "Blanco",
+    "price": 6.99,
+    "borrado": false
+  },
+  {
+    "id": 10,
+    "name": "Caja de Transporte para Gatos",
+    "description": "Una caja espaciosa y segura para llevar a tu gato de viaje cómodamente.",
+    "image": "imagen10.jpg",
+    "category": "Gatos",
+    "color": "Gris",
+    "price": 24.99,
+    "borrado": true
+  },
+  {
+    "id": 11,
+    "name": "juguete",
+    "desription": "de mimbre",
+    "category": "aves",
+    "price": "2000",
+    "color": "negro",
+    "imge": "imagen11.jpg",
+    "description": "para aves",
+    "image": "",
+    "borrado": true
+  },
+  {
+    "id": 12,
+    "name": "comida ",
+    "desription": "doggy",
+    "category": "perros",
+    "price": "30000",
+    "color": "blanco",
+    "imge": "producto-1695573004708.jpg",
+    "borrado": false
+  }
+]
