@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <%- include('partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/crearProducto.css">
+    <title>Petshop Innovador - Crear Producto</title>
+</head>
+
+<header>
+<%- include('partials/header.ejs')%>
+</header>
+<body>
+<section class="create-product">
+    <h2>Cargar un nuevo producto</h2>
+    <h3> Agregue descripción de producto</h3>
+
+    <form action="/product" method="post" enctype="multipart/form-data">
+        
+        <input type="text" placeholder="Nombre del producto" name="name">
+        <input type="text" placeholder="Descripción" name="description">
+        <input type="number" placeholder="precio" id="price" name="price">
+
+        <label for="image-create" class="label-create"><i class="fas fa-upload"></i>Carga la imagen</label>
+        <input type="file" placeholder="Carga la imagen" id="image-create" name="image">                
+        <button type="submit">Subir producto</button>
+    </form>
+</section>
+</body>
+<footer>
+<%- include('partials/footer.ejs')%>
+</footer>
+</html>
