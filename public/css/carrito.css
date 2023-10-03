@@ -9,132 +9,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-  /*  HEADER: Nav*/
-  nav {
-    display: flex;
-    flex-wrap: wrap;    
-    
-  }
-
-  nav a {
-    text-decoration: none;
-  }
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    height: 120px;
-    width: 100%;
-    background-color: var(--celeste); 
-    flex-wrap: wrap;
-    justify-content: center;
-    box-shadow: 2px 4px 10px var(--color-secundario);
-    margin: 0;
-    padding: 0;
-  }
-
-  .logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; 
-    overflow: hidden;
-    margin-right: 12px;
-
-  }
-
-  .logo img {
-    width: 80%;
-    height: 80%;
-    object-fit: fill;
-    border-radius: 150px;
-  }
-
-  .div-reg{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    margin: 10px auto;
-    margin-right: 0;
-    width: 50%; 
-    height: 100%;
-    padding: 20px auto;
-    padding-right: 0;
-    border: none;
-    color: var(--color-secundario);
-    font-size: 10px;
-  }
-
-  .div-reg p{
-    margin: 0;
-    margin-right: 0;
-    padding: 10px;
-    font-size: 10px;
-
-  }
-    .div-reg p:hover{
-        color: var(--color-principal);
-        font-style: bold;
-    }
-        
-
-  .search-input {
-    flex: 1;
-    height: 20px;
-    margin: 24px 16px 8px 8px;
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: var(--color-principal);
-    display: none;
-  }
-
-  
-  .search-input:focus {
-    outline: none;
-    border: 2px solid var(--color-principal);
-    align-content: center;
-  }
-
-  .options-list {
-    text-align: center;
-    width: 100%;
-  }
-
-  .options-list ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .options-list li {
-    display: inline-block;
-    margin: 10px;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
-  .options-list li a{
-    color: var(--color-principal);
-    transition: 0.5s;
-  }
-
-  .options-list li a:hover{
-    font-size: bold;
-    text-decoration: underline;
-  }
-
-  .right-icons {
-    margin-left: auto;
-  }
-
-  .right-icons i {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-
+ 
 /*MAIN*/
+
+main {
+    padding-top: 182px;
+}
 .icon-div{
     border: none;
     background-color: var(--color-secundario);
@@ -165,7 +45,7 @@
     height: 100%;
     background-color: var(--color-secundario);
     margin: 0 auto;
-    padding: 0;   
+    padding-top: 182px;   
     border: 1px solid black;
 }
 
@@ -293,7 +173,7 @@
 footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0 auto;
     width: 100%;

@@ -64,7 +64,7 @@
                 <p><%= errors.categoria.msg %></p>
 </div>
 <% } %>
-
+<div>
 <label for="foto_perfil">Foto de Perfil:</label>
 <input type="file" id="foto_perfil" name="foto_perfil">
 <% if(locals.errors && errors.foto_perfil){ %>
@@ -74,6 +74,8 @@
 <% } %>
         <input class="btn" type="submit" name="" value="Registrarse">
         <a href="/user/login">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
     </main>    
     <%- include('partials/footer') %>
+
 </body>

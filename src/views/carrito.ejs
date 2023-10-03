@@ -10,8 +10,12 @@
         </head>
 <body>
     <%- include('partials/header') %>
-<div class="icon-div">       
+
+    <main>
+<div class="icon-div">
+    <a href="/">       
 <i class="fas fa-arrow-left"></i>
+</a>
 </div>    
 <div class="div-img">
     <img class="img-carrito" src="https://media.lmneuquen.com/p/8e66f9ee5d71ae3c2987078238c338cd/adjuntos/195/imagenes/003/530/0003530994/p21-collar-perrosce_id303988jpg.jpg" alt="Imagen 1" />
@@ -32,7 +36,7 @@
     <div class="div-botones-precio">
     <div class="div-button">
         <button>Eliminar</button>
-    <button>Guardar</button>
+        <button>Guardar</button>
     </div> 
     <div class="precio">
         <p>$5000</p>
@@ -82,26 +86,8 @@
     </div>
     <button class="continuar-compra">Continuar compra</button>
 </div>
+</main>
 </body>
-<footer>
-    <article>
-        <h3>Contactanos</h3>
-        <a href="#">petshop7@gmail.com</a>
-        <p>Tel: 555-555-555</p>
-        <p><i class="fas fa-map-marker-alt"></i> Av. Gral Paz 1234</p>
-    </article>
-    <article>
-    <h3>Seguinos</h3>
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-facebook-square"></i>
-    <i class="fab fa-tiktok"></i>
-    </article>
-    <article>
-    <h3>Metodos de pago</h3>
-    <p><i class="far fa-credit-card"></i>Tarjeta</p>
-    <p><i class="fas fa-hand-holding-usd"></i>Efectivo</p>
-    <p><i class="fas fa-comments-dollar"></i>Transferencia</p>
-    </article>
-</footer>
+<%- include('partials/footer') %>
 
 </html>
