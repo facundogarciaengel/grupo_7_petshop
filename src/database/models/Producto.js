@@ -1,4 +1,4 @@
-module.exports= function(sequelize,DataTypes){
+module.exports = function(sequelize,DataTypes){
     let alias = 'Producto'
     let cols = {
         id:{
@@ -16,10 +16,10 @@ module.exports= function(sequelize,DataTypes){
             type: DataTypes.DECIMAL
         },
         img:{
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         stock:{
-            type: DataTypes.STRING
+            type: DataTypes.INTEGER
         },
 
     }
