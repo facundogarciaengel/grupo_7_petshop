@@ -55,8 +55,8 @@ window.onload = function() {
             )
         } else {
           Swal.fire(
-            'Good job!',
-            'You clicked the button!',
+            'Buen trabajo!',
+            'Te registraste con exito!',
             'success'
           )
           }

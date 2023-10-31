@@ -12,21 +12,24 @@
 <body>
     <%- include('partials/header') %>
     <main class="main">
+        <ul class="errores"></ul>
     <form action="login.html" form="post">
         <h1>Iniciar Sesión</h1>
         <div class="textbox">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Usuario" name="" value="">
+            <input class="errors" type="text" placeholder="Usuario" id="usuario" name="usuario" value="">
         </div>
         <div class="textbox">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Contraseña" name="" value="">
+            <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña" value="">
         </div>
-        <input class="btn" type="button" name="" value="Ingresar"> 
+        <input class="btn" type="submit" name="" value="Ingresar"> 
         <a href="#">¿Olvidaste tu contraseña?</a>
         <a href="/user/registro">¿No tienes cuenta? Registrate</a>
     </form>
-    </main>    
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/loginValidations.js"></script>
 </body>
 <%- include('partials/footer') %>
 </html>
