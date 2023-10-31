@@ -8,17 +8,18 @@
 <body>
     <%- include('partials/header') %> 
     <h1>Registro de Usuario</h1>
-    <main class="main">   
+    <main class="main">  
+        <ul class="errores"></ul> 
         <form action="/user/registro" method="POST" enctype="multipart/form-data">
         <h2>Registrate</h2>
         <div class="textbox">
             <i class="fas fa-user"></i>
-            <label for="nombre">Nombre:</label>
-        <input value="<%= locals.old? old.nombre: null %>" type="text" id="nombre" name="nombre">
+            <label  for="nombre">Nombre:</label>
+        <input class="errors" value="<%= locals.old? old.nombre: null %>" type="text" id="nombre" name="nombre">
                  <% if(locals.errors && errors.nombre){ %>
                     <div style='color:red'>
                    <p><%= errors.nombre.msg %></p>
-        </div>
+                    </div>
         <% } %>
         </div>
         <div class="textbox">
@@ -28,7 +29,8 @@
                  <% if(locals.errors && errors.apellido){ %>
                     <div style='color:red'>
                    <p><%= errors.apellido.msg %></p>
-        </div>
+                    </div>
+                    
         <% } %>
         </div>
         <div class="textbox">
@@ -75,7 +77,9 @@
         <input class="btn" type="submit" name="" value="Registrarse">
         <a href="/user/login">¿Ya tienes cuenta? Inicia sesión</a>
     </div>
+    </form>
     </main>    
     <%- include('partials/footer') %>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/registroValidations.js"></script>
 </body>

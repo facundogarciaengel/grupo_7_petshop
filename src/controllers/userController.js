@@ -35,7 +35,7 @@ const controller = {
           return res.send("Se guardo el usuario")
         }
       },  
-  
+          
 }
 
 module.exports = controller
