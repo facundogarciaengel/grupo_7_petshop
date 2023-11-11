@@ -37,6 +37,12 @@ window.onload = function() {
                 text : 'Revisa los errores!'
             }
             )
-        }
-        })
-} 
+        }else {
+            Swal.fire(
+              'Buen trabajo!',
+              'Te registraste con exito!',
+              'success'
+            )
+            }
+          })
+  }
