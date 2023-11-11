@@ -22,7 +22,7 @@ window.onload = function() {
             form.contraseña.classList.remove('errors');
             form.contraseña.classList.add('valid');
         }
-        const ul = document.querySelector('.errores'); // Usa un punto para seleccionar por clase
+        const ul = document.querySelector('.errores');
 
         if (errores.length != 0) {
             ul.innerHTML = ''

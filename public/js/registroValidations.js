@@ -38,7 +38,7 @@ window.onload = function() {
             form.contrasena.classList.remove('errors');
             form.contrasena.classList.add('valid');
         }
-        const ul = document.querySelector('.errores'); // Usa un punto para seleccionar por clase
+        const ul = document.querySelector('.errores');
 
         if (errores.length != 0) {
             ul.innerHTML = ''
