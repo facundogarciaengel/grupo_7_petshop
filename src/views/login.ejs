@@ -13,6 +13,11 @@
     <%- include('partials/header') %>
     <main class="main">
         <ul class="errores"></ul>
+        <% if (errors) { %>
+            <% for (let error in errors) { %>
+                <p><%= errors[error].msg %></p>
+            <% } %>
+        <% } %>
     <form action="login.html" form="post">
         <h1>Iniciar Sesión</h1>
         <div class="textbox">
