@@ -144,6 +144,7 @@ nav {
 /* Estilos para el logotipo */
 .logo img {
     max-width: 100px; /* Establece un ancho máximo para el logotipo */
+    
 }
 
 /* Estilos para los iconos de login y carrito */
@@ -159,6 +160,8 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .options-list li {

@@ -22,6 +22,22 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
     },
     create:(req,res)=> {
         res.render('create')
+            let nuevoProducto = {
+              "id": listaProductos[listaProductos.length - 1].id + 1,
+              "name": req.body.name,
+              "description": req.body.description,
+              "category": req.body.category,
+              "price": req.body.price,
+              "color": req.body.color,
+              "image": req.file ? req.file.filename : '',
+              "borrado": false
+            }
+          
+            // Añado el nuevo producto a la lista de productos
+            listaProductos.push(nuevoProducto);
+            fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
+            // Redirijo al usuario a la página de inicio
+        res.redirect('/');
     },
     store:(req,res)=> {
         //creo un nuevo producto con los datos que me llegan por body
@@ -52,7 +68,7 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
     edit:(req,res)=> {
         let idProducto = req.params.id
         let producto = listaProductos.find(producto => producto.id == idProducto)
-        res.render('edit', {producto})
+        res.render("/")
     },
     update:(req,res)=> {
         //modifico el producto que coincida con el id que me llega por parametro
@@ -62,12 +78,12 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
         productoEncontrado.description = req.body.description,
         productoEncontrado.category = req.body.category,
         productoEncontrado.price = req.body.price,
-        productoEncontrado.image= req.file.filename,
+        productoEncontrado.image = req.file ? req.file.filename : productoEncontrado.image;
         productoEncontrado.color = req.body.color
     
     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
    
-    res.redirect("/producto")
+    res.redirect("/")
 },
     delete:(req,res)=> {
         //borrado logico del producto que coincida con el id que me llega por parametro
@@ -76,7 +92,7 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
     
     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
    
-    res.redirect("/producto")
+    res.redirect("/")
     }
 }
 

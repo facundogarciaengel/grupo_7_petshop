@@ -26,7 +26,7 @@ router.post('/create', upload.single('image'), mainController.store)
 router.get('/detail/:id', mainController.detail)
 router.get('/edit/:id', mainController.edit)
 router.put('/edit/:id', upload.single('image'), mainController.update)
-router.delete('/delete/:id', mainController.delete)
+router.get('/delete/:id', mainController.delete)
 
 
 module.exports = router

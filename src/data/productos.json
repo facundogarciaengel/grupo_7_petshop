@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Pelota para Perros",
-    "description": "Una pelota resistente y divertida para que tu perro juegue durante horas.",
+    "name": "Pelota para cobayos",
+    "description": "Una",
     "image": "imagen1.jpg",
-    "category": "Perros",
-    "color": "Blanco",
-    "price": 9.99,
-    "borrado": false
+    "category": "perros",
+    "color": "blanco",
+    "price": "9.99",
+    "borrado": true
   },
   {
     "id": 2,
@@ -91,12 +91,12 @@
   },
   {
     "id": 10,
-    "name": "Caja de Transporte para Gatos",
-    "description": "Una caja espaciosa y segura para llevar a tu gato de viaje cómodamente.",
+    "name": "Caja de cereal",
+    "description": "Una",
     "image": "imagen10.jpg",
-    "category": "Gatos",
-    "color": "Gris",
-    "price": 24.99,
+    "category": "perros",
+    "color": "blanco",
+    "price": "26.99",
     "borrado": true
   },
   {
@@ -119,6 +119,6 @@
     "price": "30000",
     "color": "blanco",
     "imge": "producto-1695573004708.jpg",
-    "borrado": false
+    "borrado": true
   }
 ]
