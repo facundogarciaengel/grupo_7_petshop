@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const moviesController = require('../controllers/productController.js');
+const productController = require('../controllers/productController.js');
 
-router.get('/producto', moviesController.list);
-router.get('/crearProducto', moviesController.new);
+router.get('/producto', productController.list);
+router.get('/crearProducto', productController.new);
 
 
 //Rutas exigidas para la creación del CRUD

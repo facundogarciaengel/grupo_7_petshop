@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const Sequelize = require('sequelize')
 
 const path = require("path");
 const methodOverride = require('method-override');

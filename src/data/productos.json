@@ -120,5 +120,10 @@
     "color": "blanco",
     "imge": "producto-1695573004708.jpg",
     "borrado": true
+  },
+  {
+    "id": 13,
+    "image": "",
+    "borrado": false
   }
 ]

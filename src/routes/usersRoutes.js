@@ -10,6 +10,8 @@ router.post('/login', [
     check('usuario').notEmpty().withMessage('El campo usuario es obligatorio.'),
     check('contraseña').notEmpty().withMessage('El campo contraseña es obligatorio.')
 ], userController.login);
+
+
 router.get('/registro', userController.registro)
 router.post('/registro', upload.single('foto_perfil'), validations,userController.registroPost)
 
