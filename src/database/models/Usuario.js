@@ -33,5 +33,8 @@ module.exports = function(sequelize, DataTypes) {
         createdAt: "created_at"
     }
     let Usuario = sequelize.define(alias,cols,config)
+
+
+    
     return Usuario
 }

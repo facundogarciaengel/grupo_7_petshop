@@ -32,5 +32,12 @@ module.exports = function(sequelize,DataTypes){
         createdAt: "created_at"
     }
     let Producto = sequelize.define(alias,cols,config)
+
+    Producto.associate = function(models) {
+        Producto.belongsTo(models.Factura,{
+            foreingKey: "factura_id",
+            as: "factura"
+        })
+    }
     return Producto
 }

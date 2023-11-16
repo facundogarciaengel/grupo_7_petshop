@@ -22,8 +22,8 @@ const controller ={
     'crearProcess':(req,res) =>{  
         let errors = validationResult(req)
         if(errors.errors.length > 0){}
-        let newProduct = db.Product.create({
-            "id": productsList.length +1,
+        console.log(req.body)
+        let newProduct = db.Producto.create({
             "nombre": req.body.name.toLowerCase(),
             "descripcion": req.body.description.toLowerCase(),
             "precio": req.body.price,
