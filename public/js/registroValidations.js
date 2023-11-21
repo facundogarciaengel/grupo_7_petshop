@@ -58,7 +58,9 @@ window.onload = function() {
             'Buen trabajo!',
             'Te registraste con exito!',
             'success'
-          )
+          ).then (()=> {
+            form.submit()
+          })
           }
         })
 }
