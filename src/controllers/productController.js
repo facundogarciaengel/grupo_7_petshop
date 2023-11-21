@@ -36,7 +36,7 @@ const controller ={
             
         },
         edit:(req,res)=>{
-            res.render(path.join(__dirname,"../views/productEdit.ejs"))
+            res.render(path.join(__dirname,"../views/edit.ejs"))
         },
         editProcess:(req,res)=>{
 

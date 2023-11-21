@@ -1,3 +1,9 @@
+:root {
+    --color-principal: #006D77;
+    --color-secundario: #EDF6F9;
+    --celeste: #83C5BE;
+}
+
 .valid{
     color: #198754;
     border: #198754 3px solid;
@@ -11,4 +17,30 @@
     background-color: #F8D7DA;
     text-align: center;
     border-radius: 10px;
+}
+
+form {
+    background-color: #83C5BE; opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    padding: 8vh;
+    border-radius: 20px;
+}
+
+form :nth-child(-n +16) {
+    padding: 8px;
+}
+
+form button {
+    margin-top: 16px;
+    color: var(--color-secundario);
+    background-color: #006D77;
+    border-radius: 5px;
+}
+
+form input {
+    border-radius: 20px;
 }
