@@ -12,7 +12,7 @@
 <body>
     <%- include('partials/header') %>
     <main class="main">
-        <ul class="errores"></ul>
+        <ul class="errors"></ul>
         <% if (errors) { %>
             <% for (let error in errors) { %>
                 <p><%= errors[error].msg %></p>
@@ -22,7 +22,12 @@
         <h1>Iniciar Sesión</h1>
         <div class="textbox">
             <i class="fas fa-user"></i>
-            <input class="errors" type="text" placeholder="Usuario" id="usuario" name="usuario" value="">
+            <input class="errors" type="text" placeholder="Email" id="email" name="email" value="">
+            <% if (locals.errors && errors.email) { %>
+                <div class="errors">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
         </div>
         <div class="textbox">
             <i class="fas fa-lock"></i>
