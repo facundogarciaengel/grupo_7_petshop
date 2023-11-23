@@ -36,10 +36,10 @@ module.exports = function(sequelize, DataTypes) {
     let Factura = sequelize.define(alias,cols,config)
 
     Factura.associate = function(models) {
-        Factura.hasMany(models.Producto,{
-            foreingKey: "producto_id",
+/*         Factura.hasMany(models.Producto,{
+            foreignKey: "productos_id",
             as: "producto"
-        })
+        }) */
     }
 
     return Factura

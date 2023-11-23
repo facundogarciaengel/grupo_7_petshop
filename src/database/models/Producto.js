@@ -21,6 +21,9 @@ module.exports = function(sequelize,DataTypes){
         stock:{
             type: DataTypes.INTEGER
         },
+/*         facturas_id:{
+            type: DataTypes.INTEGER
+        }, */
 
     }
     let config = {
@@ -34,10 +37,10 @@ module.exports = function(sequelize,DataTypes){
     let Producto = sequelize.define(alias,cols,config)
 
     Producto.associate = function(models) {
-        Producto.belongsTo(models.Factura,{
-            foreingKey: "factura_id",
+/*         Producto.belongsTo(models.Factura,{
+            foreignKey: 'facturas_id',
             as: "factura"
-        })
+        }) */
     }
     return Producto
 }

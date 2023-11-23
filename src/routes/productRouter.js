@@ -9,7 +9,7 @@ router.get('/producto', productController.list);
 //Rutas exigidas para la creación del CRUD
 router.get('/producto/add', productController.add);
 router.post('/producto/create', productController.crearProcess);
-router.get('/producto/edit/:id', productController.editProcess);
+router.get('/producto/edit/:id', productController.edit);
 router.post('/producto/update/:id', productController.update);
 router.get('/producto/delete/:id', productController.delete);
 router.post('/producto/delete/:id', productController.destroy);
