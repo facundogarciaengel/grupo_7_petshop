@@ -9,7 +9,7 @@ router.get('/login', userController.login)
 router.post('/login', [
     check('usuario').notEmpty().withMessage('El campo usuario es obligatorio.'),
     check('contraseña').notEmpty().withMessage('El campo contraseña es obligatorio.')
-], userController.login);
+], userController.loginProcess);
 
 
 router.get('/registro', userController.registro)

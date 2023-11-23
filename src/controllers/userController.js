@@ -4,8 +4,42 @@ const User = require('../models/User')
 
 const controller = { 
   login:(req,res)=> {
-    res.render('login.ejs',{data:req.body, errors: validationResult(req).errors})
+    res.render('login',{data:req.body, errors: validationResult(req).errors})
   },
+  loginProcess: (req, res) => {
+    let errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.render("login", { errors: errors.mapped(), old: req.body });
+  }
+
+  let userToLogin = User.findByField('email', req.body.email);
+  console.log(userToLogin);
+
+  if (userToLogin) {
+    if (bcrypt.compareSync(req.body.contraseña, userToLogin.contraseña)) {
+      req.session.user = userToLogin;
+      return res.redirect('/');
+    } else {
+      return res.render('login', {
+        errors: {
+          contraseña: {
+            msg: 'Contraseña incorrecta'
+          }
+        },
+        old: req.body
+      });
+    }
+  }
+
+  return res.render('/login', {
+    errors: {
+      email: {
+        msg: 'No se encuentra este email en nuestra base de datos'
+      }
+    },
+    old: req.body
+  });
+    },
     registro:(req,res)=> {
         res.render('registro.ejs')
     },
@@ -17,7 +51,7 @@ const controller = {
   
           let userInDb = User.findByField('correo', req.body.correo)
           if(userInDb){
-            return res.render('register', {
+            return res.render('registro', {
               errors : {
                 correo: {
                   msg:'Este correo ya esta registrado'
@@ -32,7 +66,7 @@ const controller = {
             foto_perfil: req.file.filename
           }
           User.create(userToCreate)
-          return res.send("Se guardo el usuario")
+          return res.redirect('/user/login');
         }
       },  
           
