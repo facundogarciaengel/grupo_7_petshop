@@ -12,7 +12,7 @@
   <%- include('partials/header') %>
     <div class="mobile-container">
       <main>
-        <form action='/edit/<%= producto.id %>?_method=put'  method="post" >
+        <form action='/producto/editar'producto.id %>?_method=put'  method="post" >
             <label for="nombre">Nombre del producto</label>
             <input value=<%= producto.name %> type="text" name="name" id="name">
             <label for="descripcion">Descripcion:</label>

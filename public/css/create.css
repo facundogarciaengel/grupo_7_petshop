@@ -20,7 +20,8 @@
 }
 
 form {
-    background-color: #83C5BE; opacity: 0.6;
+    background-color: #83C5BE;
+    opacity: 0.6;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -28,6 +29,7 @@ form {
     align-items: stretch;
     padding: 8vh;
     border-radius: 20px;
+    box-shadow: 8px 10px #006D77;
 }
 
 form :nth-child(-n +16) {

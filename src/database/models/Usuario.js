@@ -21,6 +21,15 @@ module.exports = function(sequelize, DataTypes) {
         id_roles:{
             type: DataTypes.INTEGER
         },
+        created_at:{
+            type: DataTypes.DATE
+        },
+        deleted_at:{
+            type: DataTypes.DATE
+        },
+        updated_at:{
+            type: DataTypes.DATE
+        } 
 
 
     }
