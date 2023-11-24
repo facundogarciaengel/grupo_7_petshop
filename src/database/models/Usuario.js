@@ -15,19 +15,20 @@ module.exports = function(sequelize, DataTypes) {
         email:{
             type: DataTypes.STRING
         },
-        img:{
-            type: DataTypes.INTEGER
+        contrasenia:{
+            type: DataTypes.STRING
         },
-        id_roles:{
-            type: DataTypes.INTEGER
+        imagen:{
+            type: DataTypes.STRING
         },
+
 
 
     }
     let config = {
         tableName: 'usuarios',
-        timestamps: true,
-        paranoid: true,
+        timestamps: false,
+        paranoid: false,
         deletedAt: "deleted_at",
         updatedAt: "updated_at",
         createdAt: "created_at"
