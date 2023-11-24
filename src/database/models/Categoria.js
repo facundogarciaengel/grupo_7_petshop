@@ -9,14 +9,13 @@ module.exports = function(sequelize, DataTypes) {
         nombre:{
             type: DataTypes.STRING
         },
+
+        
     }
     let config = {
         tableName: 'categoria',
-        timestamps: true,
+        timestamps: false,
         paranoid: true,
-        deletedAt: "deleted_at",
-        updatedAt: "updated_at",
-        createdAt: "created_at"
     }
     let Categoria = sequelize.define(alias,cols,config)
     return Categoria

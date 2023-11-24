@@ -5,23 +5,23 @@ const { validationResult } = require('express-validator')
 
 
 const controller ={
-    'list': async (req, res)=>{
+    list: async (req, res)=>{
         let productosListados =  await db.Producto.findAll()
         res.render('producto',{listaProductos: productosListados}) 
     },    
-    'detail':async (req, res) => {
+    detail:async (req, res) => {
         let productFound = await db.Product.findByPk(req.params.id,{include:[{association:"Categoria"}]});
         console.log("detalle de producto " + productFound.Categoria.categoria); 
-        return res.render(path.join(__dirname, "../views/detail.ejs"), { product: productFound })
+        return res.render('detail', { product: productFound })
     },
-    'crear': async (req, res) => {
+    crear: async (req, res) => {
         let producto = await db.Producto.findAll();
         let categoria = await db.Categoria.findAll();
-        return res.render(path.join(__dirname, "../views/crearProducto.ejs"),{producto:producto,categoria:categoria})
+        return res.render('create'),{producto:producto,categoria:categoria}
     },
-    'crearProcess':(req,res) =>{  
+    crearProcess:(req,res) =>{  
         let errors = validationResult(req)
-        if(errors.errors.length > 0){}
+        if(errors.errors.length > 0){} 
         console.log(req.body)
         let newProduct = db.Producto.create({
             "nombre": req.body.name.toLowerCase(),
@@ -29,37 +29,70 @@ const controller ={
             "precio": req.body.price,
             "img": req.file ? req.file.filename : 'logo.png',                    
         })
-/*             productsList.push(newProduct)
+            /*             productsList.push(newProduct)
             
             fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(productsList,null,2),'utf-8')
             res.redirect('/') */
             
         },
-        edit:(req,res)=>{
-            res.render(path.join(__dirname,"../views/edit.ejs"))
-        },
-        editProcess:(req,res)=>{
+        edit: async (req,res)=>{
+            let producto = await db.Producto.findAll();
+            let categoria = await db.Categoria.findAll();
+            return res.render('editar', {producto:producto,categoria:categoria})
 
+/*             if (req.session.userLogged) {
+                if (req.session.userLogged.id_roles == 1) {
+                    let productFound = await db.Producto.findByPk(req.params.id, { paranoid: false });
+                    return res.render('editar', {producto:productFound,categoria:categoria})
+                } else {
+                    let productFound = await db.Producto.findByPk(req.params.id);
+                    return res.render('editar', {producto:productFound,categoria:categoria})
+                }
+            } else {
+                let productFound = await db.Producto.findByPk(req.params.id);
+                return res.render('editar', {producto:productFound,categoria:categoria})
+    
+            } */
+        },
+        editProcess: async(req,res)=>{
+            let producto = await db.Producto.findAll();
+            let categoria = await db.Categoria.findAll();
+            let errors = validationResult(req)  
+
+            /* let productFound = await db.Producto.findByPk(req.params.id); */
+
+
+            if (errors.isEmpty()) {db.Producto.update({
+                nombre: req.body.name.toLowerCase(),
+                descripcion: req.body.description.toLowerCase(),
+                precio: req.body.price,
+                img: req.file ? req.file.filename : 'logo.png',  
+                categoria_id: req.body.category,
+    
+            }, { where: { id: req.params.id } })
+            return res.redirect('/' + req.params.id)}
+            else {
+                /* let productFound = await db.Producto.findByPk(req.params.id); */
+                return res.render("editar", { errores:errors.array(),categoria:categoria, producto: producto })
+            } 
+
+/* 
             fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(productsList,null,2),'utf-8')
-            res.redirect('/')
+            res.redirect('/') */
 
         },
         add: function (req, res) {
             res.render('crearProducto')  
         },
         create: async function (req, res) {
-           const productoCreado = await db.Petshop.create({
+           const productoCreado = await db.Producto.create({
                 ...req.body
            })
            console.log(productoCreado);
            res.redirect('/')
         },
-        edit: async function(req, res) {
-            const producto = await db.Petshop.findByPk(req.params.id)
-            res.render('edit',{Petshop:producto})
-        },
         update: async function (req,res) {
-            const productoEditado = await db.Petshop.update({
+            const productoEditado = await db.Producto.update({
                 ...req.body
            }, {where:{
             id: req.params.id} })
@@ -71,13 +104,13 @@ const controller ={
             res.render('productoBorrado',{Petshop:producto})
         },
         destroy: async function (req, res) {
-            const productoBorrado=  await db.Petshop.destroy({where:{
+            const productoBorrado =  await db.Producto.destroy({where:{
             id: req.params.id} })
             console.log(productoBorrado);
             res.redirect('/')
         },
         restaurar: async function (req, res){
-            const productoRestaurado=  await db.Petshop.restore({where:{
+            const productoRestaurado =  await db.Producto.restore({where:{
             id: req.params.id} })
             console.log(productoRestaurado);
             res.redirect('/')

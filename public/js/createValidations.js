@@ -48,7 +48,7 @@ window.onload = function() {
         } else {
           Swal.fire(
             'Buen trabajo!',
-            'Te registraste con exito!',
+            'Producto creado con éxito!',
             'success'
           ).then (()=> {
             form.submit()
