@@ -10,59 +10,51 @@
     position: relative;
   }
 
+.product-container{
+  padding : 12px;
+}
+
 .product-link {
-  padding-top: 182px;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  padding-bottom: 0;
-  box-sizing: border-box;
+ height: 200px;
+ overflow: hidden;
 }
 
   .product-link img {
     width: 100%;
-    height: 20vh;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     object-fit: cover;
   }
+
   main {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
-    margin-left: 120px;
-    width: 80vw;
 }
 
 .product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 24px;
+    margin: 12px;
     background-color: #f9f9f9;
-    padding: 2px;
+    padding: 4px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 50vh;
+    width: 80vw;
+    max-width: 300px;
   }
   .product-card img {
-    width: 20vw;
+    width: 100%;
     border-radius: 8px;
     object-fit: cover;
   }
 
-  .product-card h2 {
-    color: var(--color-principal);
-  }
-  
-  .product-info {
-    text-align: center;
-  }
-
   .add-to-cart-button {
-    height: 6vh;
-    width: 20vw;
+    height: 35px;
+    width: 100%;
     border-radius: 5px;
     font-size: larger;
     border: 2px solid var(--color-secundario);
@@ -99,200 +91,35 @@ footer article{
     
 }
 
-footer article h4{
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 auto;
-    padding: 2px;
-}
+/* Media Queries */
 
-footer article p{
-    font-size: 12px;
-    margin: 0 auto;
-    padding: 2px;
-}
-
-footer article a{
-    font-size: 10px;
-     margin: 0 auto;
-    padding: 2px;
-    color: var(--color-principal);
-    text-decoration: none;
-} 
-
-footer article a:hover{
-    color: var(--celeste);
-    text-decoration: underline;
-}
-
-footer article i{
-    font-size: 10px;
-    margin: 0 auto;
-    padding: 2px;
-    color: var(--color-principal);
-}
-
-  @media only screen and (max-width: 575px){
+  @media only screen and (min-width: 576px){
       
-      .product-link {
-        width: 60%;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 40px;
-      }
-      
-      .product-link img {
-        width: 100%;
-        height: 20vh;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        object-fit: cover;
-      }
-
-      .product-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 8px;
-        background-color: #f9f9f9;
-        padding: 4px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        width: 40vw;
-      }
-      
-      .product-card img {
-        width: 30vw;
-        border-radius: 8px;
-      }
-      
-      .product-info {
-        text-align: center;
-      }
-      .product-info h2{
-        font-size: medium;
-      }
-      .product-info p{
-        font-size: small;
-      }
-    
-      main {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-evenly;
-    }
-    .side-by-side-images a img {
-        display: none;
-      }
-
-      .add-to-cart-button {
-        height: 35px;
-        width: 20vh;
-        border-radius: 5px;
-        font-size: larger;
-        border: 2px solid var(--color-secundario);
-        background-color: var(--celeste);
-        transition: 0.3s;
-      }
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px){
-    .mobile-container {
-        padding: 12px;
-      }
-      .side-by-side-images a img {
-        display: none;
-      }
-      
-      .product-link {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        text-align: center;
-        padding-top: 40px;
-      }
-      
-      .product-link img {
-        width: 100%;
-        height: 20vh;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        object-fit: cover;
-      }
-      
-      .product-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 12px;
-        background-color: #f9f9f9;
-        padding: 4px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        width: 40vw;
-      }
-      
-      .product-card img {
-        width: 40vw;
-        border-radius: 8px;
-      }
-      
-      .product-info {
-        text-align: center;
-      }
-    
-      main {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-evenly;
-    }
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 991px){
-
-    .product-link {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        text-align: center;
-        padding-top: 182px;
-      }
-      
-      .product-link img {
-        width: 100%;
-        height: 20vh;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        object-fit: cover;
-      }
-      main {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-evenly;
-    }
-    
     .product-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 12px;
-        background-color: #f9f9f9;
-        padding: 4px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        width: 28vh;
-      }
-      .product-card img {
-        width: 20vw;
-        border-radius: 8px;
-      }
-      
-      .product-info {
-        text-align: center;
-      }
-      
+      width: 40vw;
+    }  
+    .product-link {
+      height: 150px;
+    }
   }
+    
 
+  @media only screen and (min-width: 768px){
+    .product-card {
+      width: 28vw;
+    } 
+    .product-link {
+      height: 200px;
+    }
+  }
+   
+  @media only screen and (min-width: 992px){
+    .product-card {
+      width: 20vw;
+    } 
+    .product-link {
+      height: 300px;
+    }
+  }
+    
+    
