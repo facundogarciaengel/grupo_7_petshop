@@ -1,0 +1,66 @@
+:root {
+    --color-principal: #006D77;
+    --color-secundario: #EDF6F9;
+    --celeste: #83C5BE;
+  }
+  html,
+  body {
+    height: 100%;
+    margin: 0; /* Asegurarse de que no hay márgenes en el cuerpo del documento */
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    padding: 16px;
+    border-top: 5px solid var(--color-secundario);
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+  
+  footer article {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  footer article h3,
+  footer article a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--color-secundario);
+    margin: 0; /* Eliminar márgenes */
+  }
+  
+  
+  footer article a:hover {
+    color: var(--celeste);
+    text-decoration: underline;
+  }
+  
+  footer article i {
+    font-size: 20px;
+    margin: 8px;
+  }
+  
+  @media only screen and (min-width: 576px) {
+    footer {
+      flex-direction: row;
+    }
+  
+    footer article {
+      margin-bottom: 0;
+      margin-right: 16px;
+    }
+  }
+  
