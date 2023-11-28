@@ -19,11 +19,11 @@ const controller ={
         let categoria = await db.Categoria.findAll();
         return res.render('create'),{producto:producto,categoria:categoria}
     },
-    crearProcess:(req,res) =>{  
+    crearProcess:async (req,res) =>{  
         let errors = validationResult(req)
         if(errors.errors.length > 0){} 
         console.log(req.body)
-        let newProduct = db.Producto.create({
+        let newProduct = await db.Producto.create({
             "nombre": req.body.name.toLowerCase(),
             "descripcion": req.body.description.toLowerCase(),
             "precio": req.body.price,
@@ -33,6 +33,7 @@ const controller ={
             
             fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(productsList,null,2),'utf-8')
             res.redirect('/') */
+            return res.redirect('/')
             
         },
         edit: async (req,res)=>{
