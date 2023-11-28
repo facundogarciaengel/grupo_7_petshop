@@ -82,7 +82,7 @@ const controller ={
 
         },
         add: function (req, res) {
-            res.render('crearProducto')  
+            res.render('create')  
         },
         create: async function (req, res) {
            const productoCreado = await db.Producto.create({
