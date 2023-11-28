@@ -21,7 +21,7 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
         res.render('carrito')
     },
     create:(req,res)=> {
-        res.render('create')
+       
             let nuevoProducto = {
               "id": listaProductos[listaProductos.length - 1].id + 1,
               "name": req.body.name,

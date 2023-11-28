@@ -13,7 +13,8 @@
 /* Estilos generales para el encabezado */
 header {
     position: fixed;
-    margin: auto;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1;
     background-color: var(--color-principal);
@@ -193,9 +194,8 @@ nav {
     }
 
     .mobile-menu {
-        display: none; /* Muestra el menú hamburguesa en pantallas pequeñas */
+        display: none;
     }
 
-    /* Estilos adicionales para la presentación vertical */
-    /* ... (ajusta los estilos según tus necesidades) ... */
+   
 }

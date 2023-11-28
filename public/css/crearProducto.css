@@ -1,10 +1,48 @@
-:root {
+/* :root {
     --color-principal: #006D77;
     --color-secundario: #EDF6F9;
     --celeste: #83C5BE;
 }
 
-.form-size{    
+body{
+    font-size: 16px;
+    line-height: 1.5px;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3{
+    font-size: 1.5em;
+}
+
+input, label, button {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.label-create{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image-create{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+/* .form-size{    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -16,7 +54,7 @@
      color:#474747;;
      text-align: center;
      align-items: center;
-     font-size: 20px;
+     font-size: 2em;
  }
  .size-edit{
      display: flex;
@@ -68,4 +106,4 @@
  }
  .label-edit:hover{
      box-shadow: 0px 0px 10px var(--celeste);
- }
+ } */ 
