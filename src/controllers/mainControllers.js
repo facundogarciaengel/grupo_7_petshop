@@ -66,23 +66,22 @@ const controller = {
         }
         
 }, 
-    edit:(req,res)=> {
+    edit:async(req,res)=> {
         let idProducto = req.params.id
-        let producto = listaProductos.find(producto => producto.id == idProducto)
-        res.render("/")
+        let producto = await db.Producto.findAll();
+        res.render("/editar")
     },
-    update:(req,res)=> {
+    update:async (req,res)=> {
         //modifico el producto que coincida con el id que me llega por parametro
-        let productoEncontrado = listaProductos.find((producto)=> producto.id == req.params.id)
+        let productoEncontrado = await db.Producto.findAll();
         productoEncontrado.id = productoEncontrado.id,
         productoEncontrado.name = req.body.name,
         productoEncontrado.description = req.body.description,
         productoEncontrado.category = req.body.category,
         productoEncontrado.price = req.body.price,
         productoEncontrado.image = req.file ? req.file.filename : productoEncontrado.image;
-        productoEncontrado.color = req.body.color
     
-    fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8")
+/*     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), JSON.stringify(listaProductos, null, 2), "utf-8") */
    
     res.redirect("/")
 },

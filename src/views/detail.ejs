@@ -11,19 +11,21 @@
   <%- include('partials/header') %>
     <div class="mobile-container">
       <main>
-          <div class="product-card">
-            <img src="/images/<%= producto.image?producto.image:'default.jpg' %>" alt="Producto 1" />
-            <div class="product-info">
-              <h2><%= producto.name %></h2>
-              <p><%= producto.description %></p>
-              <p>categoria: <%= producto.category %></p>
-              <p>color disponible: <%= producto.color%></p>
-              <p>$<%= producto.price %></p>
-              <a href="/carrito"><button class="add-to-cart-button">Añadir al carro</button></a>
-            </div>
-          </div>  
-    </main>
+        <div class="product-card">
+          <img src="/images/<%= producto.image?producto.image:'default.jpg' %>" alt="Producto 1" />
+          <div class="product-info">
+            <h2><%= producto.name %></h2>
+            <p><%= producto.description %></p>
+            <p>categoria: <%= producto.category %></p>
+            <p>color disponible: <%= producto.color%></p>
+            <p>$<%= producto.price %></p>
+            <a href="/carrito"><button class="add-to-cart-button">Añadir al carro</button></a>
+          </div>
+        </div>  
+      </main>
     </div>
   </body>
   <%- include('partials/footer') %>
 </html>
+
+

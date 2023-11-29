@@ -81,12 +81,12 @@
   },
   {
     "id": 9,
-    "name": "Shampoo para Perros",
-    "description": "Un shampoo suave y de calidad para mantener el pelaje de tu perro limpio y brillante.",
-    "image": "imagen9.jpg",
+    "name": "Collar de ahorque",
+    "description": "collar para perro mediano",
+    "image": "retrato-adorable-perro-pitbull.jpg",
     "category": "Perros",
-    "color": "Blanco",
-    "price": 6.99,
+    "color": "Negro",
+    "price": 2500,
     "borrado": false
   },
   {
@@ -113,13 +113,13 @@
   },
   {
     "id": 12,
-    "name": "comida ",
-    "desription": "doggy",
-    "category": "perros",
-    "price": "30000",
-    "color": "blanco",
-    "imge": "producto-1695573004708.jpg",
-    "borrado": true
+    "name": "Shampoo para Perros",
+    "description": "shampoo para perros",
+    "image": "imagen9.jpg",
+    "category": "Perros",
+    "color": "Blanco",
+    "price": 4000,
+    "borrado": false
   },
   {
     "id": 13,

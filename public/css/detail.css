@@ -10,6 +10,11 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     background-color: #fff;
 }
+
+.product-card img{
+    width: 500px;
+    object-fit: fill;
+}
 .product-info{
     display: flex;
     flex-direction: column;

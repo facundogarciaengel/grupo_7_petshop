@@ -21,7 +21,9 @@
         <% productos.forEach(product => { %>
           <div class="product-card">
             <div>
-              <img src='/images/<%= product.img %>' alt="imagen producto"/>
+              <a href="/detail/<%= product.id %>">
+              <img src='/images/<%= product.img %>'/>
+              </a>
             </div>
             <div class="product-info">
               <h2><%= product.nombre %></h2>
