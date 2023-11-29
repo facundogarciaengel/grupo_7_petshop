@@ -20,10 +20,10 @@
       <main>
         <% productos.forEach(product => { %>
           <div class="product-card">
-            <img src="/images/<%= product.image %>" alt="Producto 1" />
+            <div><%= product.img %></div>
             <div class="product-info">
-              <h2><%= product.name %></h2>
-              <p><%= product.price %></p>
+              <h2><%= product.nombre %></h2>
+              <p><%= product.precio %></p>
               <a href="/carrito"><button class="add-to-cart-button">Añadir al carro</button></a>
             </div>
           </div>

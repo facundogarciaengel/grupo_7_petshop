@@ -1,17 +1,18 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
 //traigo la lista de productos
 const listaProductos = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json'), 'utf-8'));
 
 const controller = {
-    home:(req,res)=> {
+    home: async (req,res)=> {
         //filtro los productos que no estan borrados
-       
-let productosSinBorrar = listaProductos.filter((producto) => producto.borrado == false)
-        res.render('home', {productos: productosSinBorrar})
+        let productosListados =  await db.Producto.findAll()
+        res.render('home', {productos: productosListados})
+        
     },
     
-    detail:(req,res)=> {
+    detail: async(req,res)=> {
         //busco el producto que coincida con el id que me llega por parametro
         let producto = listaProductos.find((producto) => producto.id == req.params.id)
         res.render('detail', {producto: producto})
@@ -29,7 +30,7 @@ let productosSinBorrar = listaProductos.filter((producto) => producto.borrado ==
               "category": req.body.category,
               "price": req.body.price,
               "color": req.body.color,
-              "image": req.file ? req.file.filename : '',
+              "img": req.file ? req.file.filename : '',
               "borrado": false
             }
           

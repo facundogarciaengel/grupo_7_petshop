@@ -12,17 +12,17 @@
   <%- include('partials/header') %>
     <div class="mobile-container">
       <main>
-        <form action='/producto/editar'producto.id %>?_method=put'  method="post" >
+        <form class="form" action="/edit/<%= producto.id %>?_method=put" method="POST" >
             <label for="nombre">Nombre del producto</label>
-            <input value=<%= producto.name %> type="text" name="name" id="name">
+            <input type="text" id="nombre" name="nombre" value="<%=producto.nombre %>">
             <label for="descripcion">Descripcion:</label>
-            <input value=<%= producto.description %> type="text" name="description" id="description">
+            <input type="text" name="description" id="description" value="<%=producto.descripcion %>">
             <label for="precio">Precio: </label>
-            <input value=<%= producto.price %> type="number" name="price" id="price">
+            <input type="text" id="precio" name="precio" value="<%=producto.precio %>">
             <label for="img">Imagen: </label>
-            <input value=<%= producto.image %> type="file" name="image" id="image" class="width:200px height: 200px">
+            <input type="file" name="image" id="image" class="width:200px height: 200px" value="<%= producto.image %>">
             <label for="categoria">Categoria</label>
-            <select value=<%= producto.category%> name="category">
+            <select name="category" value="<%= producto.category%>">
             <option value="perros">Perros</option>
             <option value="gatos">Gatos</option>
             <option value="aves">Aves</option>
@@ -39,6 +39,7 @@
         <form action='/delete/<%= producto.id %>?_method=delete'  method="post">
             <button type="submit">Eliminar Producto</button>
         </form>
+
     </main>
     </div>
   </body>

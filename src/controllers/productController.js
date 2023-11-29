@@ -7,7 +7,7 @@ const { validationResult } = require('express-validator')
 const controller ={
     list: async (req, res)=>{
         let productosListados =  await db.Producto.findAll()
-        res.render('producto',{listaProductos: productosListados}) 
+        res.render('home',{listaProductos: productosListados}) 
     },    
     detail:async (req, res) => {
         let productFound = await db.Product.findByPk(req.params.id,{include:[{association:"Categoria"}]});
@@ -64,11 +64,11 @@ const controller ={
 
 
             if (errors.isEmpty()) {db.Producto.update({
-                nombre: req.body.name.toLowerCase(),
-                descripcion: req.body.description.toLowerCase(),
-                precio: req.body.price,
-                img: req.file ? req.file.filename : 'logo.png',  
-                categoria_id: req.body.category,
+                nombre: req.body.nombre,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+                img: req.file ? req.file.image : 'logo.png',  
+                categoria_id: req.body.categoria,
     
             }, { where: { id: req.params.id } })
             return res.redirect('/' + req.params.id)}

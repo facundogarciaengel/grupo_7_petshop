@@ -10,7 +10,7 @@ router.get('/producto', productController.list);
 router.get('/producto/add', productController.add);
 router.post('/producto/create', productController.crearProcess);
 router.get('/producto/edit', productController.edit);
-router.get('/producto/edit/:id', productController.edit);
+router.get('/producto/edit/:id', productController.editProcess);
 router.post('/producto/update/:id', productController.update);
 router.get('/producto/delete/:id', productController.delete);
 router.post('/producto/delete/:id', productController.destroy);
