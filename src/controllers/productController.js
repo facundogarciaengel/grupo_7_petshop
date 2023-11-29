@@ -34,7 +34,7 @@ const controller ={
             fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(productsList,null,2),'utf-8')
             res.redirect('/') */
             return res.redirect('/')
-            
+            console.log(newProduct)
         },
         edit: async (req,res)=>{
             let producto = await db.Producto.findAll();

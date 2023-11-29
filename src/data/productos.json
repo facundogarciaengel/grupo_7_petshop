@@ -135,5 +135,10 @@
     "id": 15,
     "image": "",
     "borrado": false
+  },
+  {
+    "id": 16,
+    "img": "",
+    "borrado": false
   }
 ]
