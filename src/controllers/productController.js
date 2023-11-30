@@ -60,7 +60,7 @@ const controller ={
             let categoria = await db.Categoria.findAll();
             let errors = validationResult(req)  
 
-            /* let productFound = await db.Producto.findByPk(req.params.id); */
+            let productFound = await db.Producto.findByPk(req.params.id);
 
 
             if (errors.isEmpty()) {db.Producto.update({
@@ -73,7 +73,7 @@ const controller ={
             }, { where: { id: req.params.id } })
             return res.redirect('/' + req.params.id)}
             else {
-                /* let productFound = await db.Producto.findByPk(req.params.id); */
+                let productFound = await db.Producto.findByPk(req.params.id);
                 return res.render("editar", { errores:errors.array(),categoria:categoria, producto: producto })
             } 
 
