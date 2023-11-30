@@ -68,7 +68,7 @@ const controller = {
     edit:async(req,res)=> {
         let productId = req.params.id
         let product = await db.Producto.findAll();
-        res.render("/editar")
+        res.render("/editar", { producto: product })
     },
     update:async (req,res)=> {
         //modifico el producto que coincida con el id que me llega por parametro
