@@ -12,19 +12,27 @@
   <%- include('partials/header') %>
     <div class="mobile-container">
       <main>
-        <form class="form-editar" action="/producto/update/:id" method="POST" >
+        <form class="form-editar" action="/producto/edit/<%=producto.id %>" method="post"
+          enctype="multipart/form-data">
           <label for="producto_id">ID </label>
-          <input type="producto_id" id="producto_id" name="producto_id" placeholder="0">
-            <label for="nombre">Nombre del producto</label>
-            <input type="text" id="nombre" name="nombre" value="<%=producto.nombre %>" required>
+          <select type="select" class="producto_id" name="producto_id" id="producto_id">
+            <option value="" disabled selected>- Seleccionar producto - </option>
+            <% producto.forEach(product=> { %>
+                <option value="<%= product.id%>">
+                    <%= product.nombre %>
+                </option>
+                <% }); %>
+        </select>    
+          <label for="nombre">Nombre del producto</label>
+            <input type="text" id="nombre" name="nombre" value="<%=producto.nombre %>" >
             <label for="descripcion">Descripcion:</label>
-            <input type="text" name="description" id="description" value="<%=producto.descripcion %>" required>
+            <input type="text" name="description" id="description" value="<%=producto.descripcion %>" >
             <label for="precio">Precio: </label>
             <input type="text" id="precio" name="precio" value="<%=producto.precio %>">
             <label for="img">Imagen: </label>
-            <input type="file" name="image" id="image" class="width:200px height: 200px" value="<%= producto.image %>" required>
+            <input type="file" name="image" id="image" class="width:200px height: 200px" value="<%= producto.image %>" >
             <label for="categoria">Categoria</label>
-            <select name="category" value="<%= producto.category%>" required>
+            <select name="category" value="<%= producto.category%>">
             <option value="perros">Perros</option>
             <option value="gatos">Gatos</option>
             <option value="aves">Aves</option>
@@ -44,7 +52,8 @@
 
     </main>
     </div>
-    <script src="/js/editValidations.js"></script>
+    <script src="/js/createValidations.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
   <%- include('partials/footer') %>
 </html>
