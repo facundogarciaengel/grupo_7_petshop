@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
      
     let displayCarrito = function () {
@@ -29,6 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     console.log(carrito);
 }
+let actualizarTotal = function () {
+    let carrito = JSON.parse(localStorage.getItem("carrito"));
+    console.log(carrito)
+    let total = carrito.reduce((acumulador, elemento) => {
+        return acumulador + parseFloat(elemento.subtotal);
+    }, 0);
+    console.log(total)
 displayCarrito();
+actualizarTotal();
 }
-)
+})
