@@ -12,14 +12,14 @@
     <div class="mobile-container">
       <main>
         <div class="product-card">
-          <img src="/images/<%= producto.image?producto.image:'default.jpg' %>" id="imagen" alt="<%= producto.image %>" />
+          <img src="/images/products/<%= producto.img?producto.img:'logo.png' %>" id="imagen" alt="<%= producto.image %>" />
           <div class="product-info">
             <p class="id"><%= producto.id %></p>
-            <h2 id="nombre"><%= producto.name %></h2>
-            <p id="descripcion"><%= producto.description %></p>
-            <p id="categoria">categoria: <%= producto.category %></p>
+            <h2 id="nombre"><%= producto.nombre %></h2>
+            <p id="descripcion"><%= producto.descripcion %></p>
+            <p id="categoria">categoria: <%= producto.categoria %></p>
             <p id="color">color disponible: <%= producto.color%></p>
-            <p id="precio">$<%= producto.price %></p>
+            <p id="precio">$<%= producto.precio %></p>
             <a href="/carrito"><button class="add-to-cart-button">Añadir al carro</button></a>
           </div>
         </div>  

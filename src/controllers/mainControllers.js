@@ -12,10 +12,9 @@ const controller = {
         
     },
     
-    detail: async(req,res)=> {
-        //busco el producto que coincida con el id que me llega por parametro
-        let producto = listaProductos.find((producto) => producto.id == req.params.id)
-        res.render('detail', {producto: producto})
+    detail:async (req, res) => {
+        let productFound = await db.Producto.findByPk(req.params.id)
+        return res.render('detail', { producto: productFound })
     },
    
     carrito:(req,res)=> {

@@ -10,9 +10,9 @@ const controller ={
         res.render('home',{listaProductos: productosListados}) 
     },    
     detail:async (req, res) => {
-        let productFound = await db.Product.findByPk(req.params.id,{include:[{association:"Categoria"}]});
+        let productFound = await db.Producto.findByPk(req.params.id,{include:[{association:"Categoria"}]});
         console.log("detalle de producto " + productFound.Categoria.categoria); 
-        return res.render('detail', { product: productFound })
+        return res.render('detail', { producto: productFound })
     },
     crear: async (req, res) => {
         let producto = await db.Producto.findAll();
