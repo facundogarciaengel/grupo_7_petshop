@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const productController = require('../controllers/productController');
+const uploadFile = require('../middlewares/multer')
 
 router.get('/producto', productController.list);
 /* router.get('/crearProducto', productController.new); */
@@ -8,7 +9,7 @@ router.get('/producto', productController.list);
 
 //Rutas exigidas para la creación del CRUD
 router.get('/producto/add', productController.add);
-router.post('/producto/create', productController.crearProcess);
+router.post('/producto/create' , uploadFile.single('img') ,productController.crearProcess);
 router.get('/producto/edit', productController.edit);
 router.get('/producto/edit/:id', productController.editProcess);
 router.post('/producto/update/:id', productController.update);

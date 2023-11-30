@@ -50,7 +50,7 @@ const controller = {
                 "category": req.body.category,
                 "price": req.body.price,
                 "color": req.body.color,
-                "imge": req.file.filename,
+                "img": req.file.filename,
                 "borrado": false
             }
             console.log('Entro por post', nuevoProducto)
